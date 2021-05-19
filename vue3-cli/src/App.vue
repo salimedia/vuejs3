@@ -9,10 +9,18 @@
         
       </div>
     </div>
-    <Courses />
+    <Courses>
+      <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Library</li>
+      </ol>
+      <template v-slot:button-right>
+        <button class="btn btn-sm btn-success">New</button>
+      </template>
+    </Courses>
   </div>
 
-  <Footer />
+  <Footer url="http://brightcoding.dev" title="Bright Coding Certfs" text="Check your certificat here"  />
 </template>
 
 <script>

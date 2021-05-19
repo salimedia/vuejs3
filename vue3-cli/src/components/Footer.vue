@@ -1,12 +1,11 @@
 <template>
     <div class="card text-center mt-5">
         <div class="card-header">
-            Quote
+            {{ text }}
         </div>
         <div class="card-body">
             <blockquote class="blockquote mb-0">
-            <p>A well-known quote, contained in a blockquote element.</p>
-            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+            <footer class="blockquote-footer">{{ title }} | {{ url }}</footer>
             </blockquote>
         </div>
     </div>
@@ -14,7 +13,7 @@
 
 <script>
 export default {
-
+    props: ['url','title','text']
 }
 </script>
 
