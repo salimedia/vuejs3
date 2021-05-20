@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-sm fixed-top navbar-light bg-warning">
+    <nav class="navbar navbar-expand-sm navbar-light bg-warning">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">primary</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID"
