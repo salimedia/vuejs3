@@ -34,6 +34,12 @@
         </div>
     </div>
 
+    <teleport to="#alert" v-if="courseAdded">
+        <div class="alert alert-success text-center" role="alert">
+            Course was Added Successfully!
+        </div>
+    </teleport>
+
     <teleport to="#alert" v-if="courseDeleted">
         <div class="alert alert-danger text-center" role="alert">
             Course was deleted!
@@ -54,7 +60,8 @@ export default {
     data(){
         return {
             showForm: false,
-            courseDeleted: false,
+            courseAdded: false,
+            courseDeleted: false,            
             courses: [
                 {id: 1, title: "Apprendre JAVASCRIPT", image: "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/H9QyEOsSLG05qNb2kC0V"},
                 {id: 2, title: "Formation sur Angular", image: "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/nrOHB2iQTIiGe7hHX9O0"},
@@ -74,7 +81,11 @@ export default {
         },
         AddCourse(course){
             this.courses.unshift(course)
-            this.showForm = false
+            this.showForm = false;
+            this.courseAdded = true
+            setTimeout(() => {
+                this.courseAdded = false
+            }, 1500);
         },
         displayForm(){
             this.showForm = !this.showForm
