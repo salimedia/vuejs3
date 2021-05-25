@@ -26,9 +26,7 @@
     <div class="row">
         <div class="col" v-for="course in courses">
             <OneCourse 
-                :id="course.id" 
-                :title="course.title" 
-                :image="course.image" 
+                :course="course"
                 @delete="deleteOneCourse($event)" 
             />
         </div>
@@ -63,10 +61,10 @@ export default {
             courseAdded: false,
             courseDeleted: false,            
             courses: [
-                {id: 1, title: "Apprendre JAVASCRIPT", image: "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/H9QyEOsSLG05qNb2kC0V"},
-                {id: 2, title: "Formation sur Angular", image: "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/nrOHB2iQTIiGe7hHX9O0"},
-                {id: 3, title: "LEARN VUEJS 3 ", image: "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/k7Fltx5ITbu9LI6VtgTS"},
-                {id: 4, title: "Symfony 4 ", image: "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/xhOLHK67RWFXYva2FjQs"}
+                {id: 1, title: "Apprendre JAVASCRIPT", image: "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/H9QyEOsSLG05qNb2kC0V", category: 'FullStack', tags: ['javascript', 'fullstack']},
+                {id: 2, title: "Formation sur Angular", image: "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/nrOHB2iQTIiGe7hHX9O0", category: 'Frontend', tags: ['javascript', 'Frontend']},
+                {id: 3, title: "LEARN VUEJS 3 ", image: "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/k7Fltx5ITbu9LI6VtgTS", category: 'Frontend', tags: ['javascript', 'Frontend']},
+                {id: 4, title: "Symfony 4 ", image: "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/xhOLHK67RWFXYva2FjQs", category: 'Backend', tags: ['Backend']}
             ]
         }
     },
