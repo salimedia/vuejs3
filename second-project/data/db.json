@@ -1,0 +1,37 @@
+{
+  "posts": [
+    {
+      "id": 3,
+      "title": "Learn VueJS 3 updated",
+      "slug": "learn-vuejs",
+      "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis nostrum excepturi error, consectetur fuga alias molestias itaque aperiam eveniet odit nam exercitationem minus. Nesciunt et saepe quasi laborum repellat aspernatur.\nThis post is updated for new version of VueJS. updated"
+    },
+    {
+      "id": 4,
+      "title": "Learn NodeJS updated",
+      "slug": "learn-nodejs",
+      "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis nostrum excepturi error, consectetur fuga alias molestias itaque aperiam eveniet odit nam exercitationem minus. Nesciunt et saepe quasi laborum repellat aspernatur. updated version"
+    },
+    {
+      "title": "Learn SQL Server",
+      "content": "Cupiditate architecto minus rerum in est, non laborum tenetur quod consequatur.",
+      "id": 11
+    },
+    {
+      "title": "Learn Spring Boot",
+      "content": "Repellendus. Voluptatem ut rerum eos ullamco in voluptatem, est, eos aut aut ame.",
+      "id": 13
+    },
+    {
+      "title": "Learn Laravel 8 ",
+      "content": "Repellendus. Voluptatem ut rerum eos ullamco in voluptatem, est, eos aut aut ame.\nThis post is updated for Laravel 8 new version.",
+      "id": 14
+    },
+    {
+      "title": "Php 8 & OOP",
+      "content": "Architecto incidunt, et dolores necessitatibus magna molestias quos est cumque m.\nThe best ever course for: php 8 and OOP.",
+      "id": 16
+    }
+  ],
+  "users": []
+}

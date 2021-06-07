@@ -1,9 +1,19 @@
 <template lang="">
     <div>
-        <h1>Show Post</h1>
-        <h2>id: {{ id }}</h2>
-        <h2>slug is: {{ slug }}</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis nostrum excepturi error, consectetur fuga alias molestias itaque aperiam eveniet odit nam exercitationem minus. Nesciunt et saepe quasi laborum repellat aspernatur.</p>
+        <div v-if="post" class="card border-primary mb-3" wfd-id="72">
+            <div class="card-header" wfd-id="74">
+                {{ post.title }}
+            </div>
+            <div class="card-body" wfd-id="73">
+                <h4 class="card-title">{{ post.title }}</h4>
+                <p class="card-text"> {{ post.content }}</p>
+            </div>
+        </div>
+        <div v-else class="text-center my-3" >
+            <div class="spinner-grow" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -11,8 +21,14 @@
         props: ['id', 'slug'],
         data() {
             return {
-
+                post: null
             }
+        },
+        mounted() {
+            fetch('http://localhost:3000/posts/' + this.id)
+            .then(res => res.json())
+            .then(data => this.post = data)
+            .catch(err => console.log(err))
         }
     }
 </script>
